@@ -1,7 +1,7 @@
 const ThankYouStep: React.FC = () => {
   return (
     <div className="mt-8 text-center">
-      <p className="mb-4 text-lg">Connect with us:</p>
+      <p className="mb-4 text-lg text-black">Connect with us:</p>
       <div className="flex justify-center gap-4 text-2xl">
         <a 
           href="https://facebook.com/grocerymoney" 
@@ -45,8 +45,8 @@ const ThankYouStep: React.FC = () => {
         </a>
       </div>
       <div className="mt-6 bg-green-50 p-4 rounded-lg">
-        <p className="text-sm">Our team will contact you within 24 hours</p>
-        <p className="mt-2">Email: <strong>support@grocerymoney.com</strong></p>
+        <p className="text-sm text-black">Our team will contact you within 24 hours</p>
+        <p className="mt-2 text-black">Email: <strong>support@grocerymoney.com</strong></p>
       </div>
     </div>
   );

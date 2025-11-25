@@ -23,7 +23,7 @@ const FormStep: React.FC<FormStepProps> = ({ form, updateForm, submitForm, isLoa
           onChange={(e) => updateForm('name', e.target.value)}
           placeholder="Full Name" 
           required 
-          className="form-input w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="form-input w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-black"
         />
       </div>
       
@@ -35,7 +35,7 @@ const FormStep: React.FC<FormStepProps> = ({ form, updateForm, submitForm, isLoa
           onChange={(e) => updateForm('email', e.target.value)}
           placeholder="Email Address" 
           required 
-          className="form-input w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="form-input w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-black"
         />
       </div>
       
@@ -47,7 +47,7 @@ const FormStep: React.FC<FormStepProps> = ({ form, updateForm, submitForm, isLoa
           onChange={(e) => updateForm('contact', e.target.value)}
           placeholder="Phone / Contact" 
           required 
-          className="form-input w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="form-input w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-black"
         />
       </div>
       
@@ -57,7 +57,7 @@ const FormStep: React.FC<FormStepProps> = ({ form, updateForm, submitForm, isLoa
           value={form.country}
           onChange={(e) => updateForm('country', e.target.value)}
           required 
-          className="form-input w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="form-input w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-black"
         >
           <option value="" disabled>Select your country</option>
           <option value="USA">USA</option>
