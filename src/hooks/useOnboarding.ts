@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FormData, Step } from '@/components/types';
-
+import { sendOnboardingForm } from '@/lib/api';
 const stepsData: Step[] = [
   {
     title: "Welcome to Grocery Money Program",
@@ -98,14 +98,16 @@ export const useOnboarding = () => {
     }));
   };
 
-  const submitForm = async () => {
-    // In a real implementation, this would connect to a backend API
-    console.log("Form submitted:", form);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    nextStep();
-  };
+
+
+const submitForm = async () => {
+  try {
+    await sendOnboardingForm(form);
+    // success handling
+  } catch (error) {
+    console.error("Form submit failed", error);
+  }
+};
 
   return {
     currentStep,
