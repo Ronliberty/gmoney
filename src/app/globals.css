@@ -1,18 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
-@theme {
-  /* Custom colors (equivalent to theme.extend.colors in v3) */
-  --color-primary: #10b981;
-  --color-secondary: #059669;
-  --color-accent: #6ee7b7;
-  --color-light: #d1fae5;
 
-  /* Custom animations (equivalent to theme.extend.animation in v3) */
-  --animate-float: float 3s ease-in-out infinite;
-  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
-  --animate-slideIn: slideIn 0.3s ease-out;
-}
 
 @layer base {
   :root {
