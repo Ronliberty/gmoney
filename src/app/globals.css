@@ -1,61 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Custom colors (equivalent to theme.extend.colors in v3) */
+  --color-primary: #10b981;
+  --color-secondary: #059669;
+  --color-accent: #6ee7b7;
+  --color-light: #d1fae5;
+
+  /* Custom animations (equivalent to theme.extend.animation in v3) */
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+  --animate-slideIn: slideIn 0.3s ease-out;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Make your custom colors available as CSS variables (optional but handy) */
+    --primary: #10b981;
+    --secondary: #059669;
+    --accent: #6ee7b7;
+    --light: #d1fae5;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+  }
+
+  body.modal-open {
+    overflow: hidden;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* Your keyframe definitions */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
 }
 
-.step-container {
-  opacity: 0;
-  transform: translateX(20px);
-  transition: opacity 0.5s, transform 0.5s;
+/* Optional helper classes if you prefer them over direct Tailwind classes */
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out forwards;
 }
-
-.step-container.active {
-  opacity: 1;
-  transform: translateX(0);
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
-
-.form-input:focus {
-  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
-}
-
-.btn-primary {
-  background-color: #16a34a;
-  transition: all 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #15803d;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(22, 163, 74, 0.3);
-}
-
-.social-icon {
-  transition: all 0.3s;
-}
-
-.social-icon:hover {
-  transform: translateY(-3px);
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
 }
