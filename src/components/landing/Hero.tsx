@@ -16,7 +16,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="hero-bg text-white pt-32 pb-20 px-4 md:pt-40 md:pb-32 lg:pt-48 lg:pb-40">
+    <section className="bg-primary text-white pt-32 pb-20 px-4 md:pt-40 md:pb-32 lg:pt-48 lg:pb-40">
       <div className="max-w-7xl mx-auto">
         <div className="text-center px-4">
           <div className="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6 md:mb-8">

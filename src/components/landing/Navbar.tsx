@@ -24,7 +24,7 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen }: Navbar
   }
 
   return (
-    <nav className="navbar-bg shadow-lg fixed top-0 w-full z-50 text-white">
+    <nav className="bg-primary shadow-lg fixed top-0 w-full z-50 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex-shrink-0 flex items-center">
