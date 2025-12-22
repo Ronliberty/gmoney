@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-
+import { Analytics } from "@vercel/analytics/next"
 export const metadata: Metadata = {
   title: 'Grocery Money - Earn Weekly Income Through AI Platforms',
   description: 'Earn consistent weekly income through AI platforms without doing the work yourself.',
@@ -18,6 +18,7 @@ export default function RootLayout({
       </head>
       <body className="bg-gray-50 text-gray-800 font-sans leading-relaxed antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   )
