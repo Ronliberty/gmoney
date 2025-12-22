@@ -4,6 +4,9 @@ import { Analytics } from "@vercel/analytics/next"
 export const metadata: Metadata = {
   title: 'Grocery Money - Earn Weekly Income Through AI Platforms',
   description: 'Earn consistent weekly income through AI platforms without doing the work yourself.',
+  icons: {
+    icon:"/gm.ico"
+  }
 }
 
 export default function RootLayout({
