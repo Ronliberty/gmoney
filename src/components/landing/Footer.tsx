@@ -66,11 +66,11 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center text-gray-400">
                 <i className="fas fa-envelope mr-3"></i>
-                support@grocerymoney.com
+                earngrocerymoney@gmail.com
               </li>
               <li className="flex items-center text-gray-400">
                 <i className="fab fa-whatsapp mr-3"></i>
-                +1 (555) 123-4567
+                +254702322851
               </li>
             </ul>
           </div>

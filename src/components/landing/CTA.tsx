@@ -1,4 +1,5 @@
 'use client'
+import Script from 'next/script';
 
 interface CTAProps {
   onOpenModal: () => void
@@ -25,7 +26,7 @@ export default function CTA({ onOpenModal }: CTAProps) {
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 max-w-3xl mx-auto px-4">
           {/* WhatsApp Button */}
           <a 
-            href="https://wa.me/1234567890" 
+            href="https://wa.me/254702322851" 
             target="_blank" 
             rel="noopener noreferrer"
             className="group relative inline-flex items-center justify-center bg-green-500 text-white font-bold text-lg sm:text-xl md:text-2xl py-5 px-8 sm:px-10 rounded-xl 
@@ -37,10 +38,26 @@ export default function CTA({ onOpenModal }: CTAProps) {
           </a>
 
           {/* Book Meeting Button */}
-          <button 
+          {/* <button 
             onClick={onOpenModal}
             className="group relative inline-flex items-center justify-center bg-primary text-white font-bold text-lg sm:text-xl md:text-2xl py-5 px-8 sm:px-10 rounded-xl 
                      hover:bg-secondary shadow-2xl hover:shadow-3xl transform hover:scale-[1.02] transition-all duration-300 min-h-[60px] w-full sm:w-auto"
+          >
+            <i className="fas fa-calendar-check text-2xl sm:text-3xl mr-3 sm:mr-4 group-hover:animate-pulse"></i>
+            <span className="text-center">Book Free Call</span>
+          </button> */}
+
+         <button
+            onClick={() => {
+              if (typeof window !== 'undefined' && window.Calendly) {
+                window.Calendly.initPopupWidget({
+                  url: 'https://calendly.com/weldonchumba254/30-min',
+                });
+              }
+            }}
+            className="group relative inline-flex items-center justify-center bg-primary text-white font-bold text-lg sm:text-xl md:text-2xl py-5 px-8 sm:px-10 rounded-xl
+                       hover:bg-secondary shadow-2xl hover:shadow-3xl transform hover:scale-[1.02]
+                       transition-all duration-300 min-h-[60px] w-full sm:w-auto"
           >
             <i className="fas fa-calendar-check text-2xl sm:text-3xl mr-3 sm:mr-4 group-hover:animate-pulse"></i>
             <span className="text-center">Book Free Call</span>
@@ -55,6 +72,18 @@ export default function CTA({ onOpenModal }: CTAProps) {
             <i className="fas fa-envelope text-2xl sm:text-3xl mr-3 sm:mr-4 group-hover:animate-bounce"></i>
             <span className="text-center">Email Us</span>
           </a>
+          <a 
+            href="https://t.me/donking_3" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center justify-center bg-[#229ED9] text-white font-bold text-lg sm:text-xl md:text-2xl py-5 px-8 sm:px-10 rounded-xl 
+                      hover:bg-[#1c8ec7] shadow-2xl hover:shadow-3xl transform hover:scale-[1.02] transition-all duration-300 min-h-[60px] w-full sm:w-auto"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            <i className="fab fa-telegram-plane text-2xl sm:text-3xl mr-3 sm:mr-4"></i>
+            <span className="text-center">Telegram (Fast)</span>
+          </a>
+
         </div>
 
         {/* Reassurance */}
