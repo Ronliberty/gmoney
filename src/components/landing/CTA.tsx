@@ -51,7 +51,7 @@ export default function CTA({ onOpenModal }: CTAProps) {
             onClick={() => {
               if (typeof window !== 'undefined' && window.Calendly) {
                 window.Calendly.initPopupWidget({
-                  url: 'https://calendly.com/weldonchumba254/30-min',
+                  url: 'https://calendly.com/earngrocerymoney/30min',
                 });
               }
             }}
