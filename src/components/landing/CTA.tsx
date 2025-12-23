@@ -73,7 +73,7 @@ export default function CTA({ onOpenModal }: CTAProps) {
             <span className="text-center">Email Us</span>
           </a>
           <a 
-            href="https://t.me/donking_3" 
+            href="https://t.me/donking3" 
             target="_blank" 
             rel="noopener noreferrer"
             className="group relative inline-flex items-center justify-center bg-[#229ED9] text-white font-bold text-lg sm:text-xl md:text-2xl py-5 px-8 sm:px-10 rounded-xl 
